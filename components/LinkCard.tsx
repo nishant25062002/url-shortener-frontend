@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
@@ -21,6 +22,7 @@ type LinkCardProps = {
   faviconUrl?: string;
   createdAt: string;
   tags?: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   refetch: any;
 };
 

@@ -11,6 +11,7 @@ type ShortenError = {
   error: string;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CreateLinkBox = ({ refetch }: any) => {
   const [originalUrl, setOriginalUrl] = useState("");
   const [title, setTitle] = useState("");
@@ -43,6 +44,7 @@ const CreateLinkBox = ({ refetch }: any) => {
       setOriginalUrl("");
       setCustomCode("");
       setTitle("");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       const axiosError = err.response?.data as ShortenError;
       setError(axiosError?.error || "Something went wrong.");
